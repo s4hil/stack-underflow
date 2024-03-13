@@ -1,0 +1,19 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+:root {
+	--primary-dark: #07111A;
+	--secondary-dark: #07192A;
+	--primary-light: #C7B98B;
+	--secondary-light: #80AB9D;
+	--mid-dark: #1C5C87;
+	--bright: #fff;
+	--danger: #d9534f;
+	--light-blue: #e2e8f0;
+	--dark-grey: #343a40;
+}
+
