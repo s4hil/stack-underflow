@@ -13,7 +13,7 @@
 		$details = $_POST['details'];
 
 		// Image stuff
-		$img_name = clean($_FILES['img']['name']);
+		$img_name = $_FILES['img']['name'];
 		$tmp_name = $_FILES['img']['tmp_name'];
         $img_size = $_FILES['img']['size'];
 		$res = uploadImg($img_name, $img_size, $tmp_name);

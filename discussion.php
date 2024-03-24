@@ -62,7 +62,6 @@
 	    					//setting vars
 	    					$topic = htmlentities($row['topic']);
 	    					$details = htmlentities($row['details']);
-	    					$details = htmlentities($row['details']);
 	    					$user = fetcUserByDid($d_id);
 	    				?>
 
@@ -112,7 +111,7 @@
 			        <h5 class="modal-title" id="exampleModalLabel">Image</h5>
 			      </div>
 			      <div class="modal-body">
-			        <img src="assets/imgs/code.png" width="100%">
+			        <img src="assets/uploads/discussions/<?php echo $row['code_img']; ?>" width="100%">
 			      </div>	
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

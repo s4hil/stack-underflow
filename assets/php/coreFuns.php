@@ -127,7 +127,7 @@ function uploadImg($img_name, $img_size, $tmp_name)
     $result = array();
     $imgNameArr = explode('.', $img_name);
     $img_ext = strtolower(end($imgNameArr));
-    $location = '../../uploads/discussions/'.rand(100,999).$img_name;
+    $location = '../../uploads/discussions/'.$img_name;
 
     $max_size = 513000;
     if ($img_size<$max_size && ($img_ext == "jpg" || $img_ext == "jpeg" || $img_ext == "png")){
