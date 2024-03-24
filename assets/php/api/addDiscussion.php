@@ -29,8 +29,6 @@
 				'$img_name',
 				'$u_id')";
 			$res2 = mysqli_query($conn, $sql2);
-			print_r($res); 
-			print_r($sql); 
 			if ($res2) {
 				?>
 					<script>
@@ -42,7 +40,7 @@
 			else {
 				?>
 					<script>
-						window.location = "../../../home.php";
+						// window.location = "../../../home.php";
 						alert("Something went wrong!");
 					</script>
 				<?php

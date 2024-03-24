@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html lang="en">
   	<head>
-	    <title>About - ICSC - StackOverflow</title>
+	    <title>About - StackUnderflow</title>
 
 		<!-- Basic Metas -->
 		<meta charset="utf-8">

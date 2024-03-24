@@ -29,6 +29,12 @@ if (isset($_GET['logout'])) {
 		<link rel="stylesheet" href="assets/css/common.css">
 		<link rel="stylesheet" href="assets/css/home.css">
 
+		<style>
+			.like-btn:hover{
+				color: blue;
+			}
+		</style>
+
 
 		<!-- Icon -->
 		<link rel="icon" href="assets/imgs/favicon.png">
@@ -44,12 +50,18 @@ if (isset($_GET['logout'])) {
 	    			<div class="top-bar">
 	    				<fieldset>
 	    					<input type="text" id="search-forum" class="form-control" placeholder="Search Forum">
+	    					<div>
+	    						<ul id="search-op">
+
+	    						</ul>
+	    					</div>
 	    				</fieldset>
 	    				<fieldset>
 	    					<button class="ml-auto btn btn-primary" id="addDiscussion" data-bs-toggle="modal" data-bs-target="#addDiscussionModal">
 	    					<i class="fas fa-plus"></i> Add Discussion
 	    				</button>
 	    				</fieldset>
+	    				
 	    			</div>
 	    			<div id="loader">
 	    				<img src="assets/imgs/loading.png">
@@ -111,6 +123,33 @@ if (isset($_GET['logout'])) {
 		<script src="assets/js/jquery.min.js"></script>
 	    <script src="assets/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/js/home.js"></script>
+		<script>
+			$("#search-forum").on('keyup', function () {
+				let search = $(this).val();
+
+				let op = "";
+
+				if (search.length > 2) {
+					let url = "http://localhost/stack-underflow/assets/php/api/search.php?q="+search;
+					$.ajax({
+						url: url,
+						method: "GET",
+						dataType: "json",
+						success: function (data) {
+							console.log(data);
+							op = `
+								<a href="discussion.php?dID=${data[0][0]}">
+	    							<li>
+	    								${data[0][1]}
+	    							</li>
+	    						</a>
+								`;
+							$("#search-op").html(op);
+						}
+					});
+				}
+			})
+		</script>
 
   	</body>
 </html>

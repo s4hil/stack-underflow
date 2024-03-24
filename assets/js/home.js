@@ -48,7 +48,7 @@ function addLike(id) {
 						<footer class="discussion-footer">
 							<div class="discussion-stats">
 	    						<div class="ups">
-	    							<a onclick="addLike(`+id+`)" post-id="`+ id +`"><i class="fas fa-thumbs-up"></i></a>
+	    							<a onclick="addLike(`+id+`)" post-id="`+ id +`"><i class="like-btn fas fa-thumbs-up"></i></a>
 	    							<span>`+likes+`</span>&nbsp;likes
 	    						</div>
 	    						&nbsp; &nbsp;

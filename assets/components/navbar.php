@@ -14,7 +14,7 @@
           <i class="fas fa-home"></i> Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.php"><i class="fas fa-info-circle"></i> About</a>
+          <a class="nav-link" href="feedback.php"><i class="fas fa-info-circle"></i> Feedback</a>
         </li>
         <li class="nav-item dropdown"> 
           <a class="nav-link dropdown-toggle" href="#" id="accountSetting" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user"></i>
